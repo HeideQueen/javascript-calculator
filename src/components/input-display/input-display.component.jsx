@@ -2,10 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const InputDisplay = ({ display, input }) => {
+  console.log(input);
   return (
     <div id='display'>
       <h2>{display}</h2>
-      <p>{input}</p>
     </div>
   );
 };

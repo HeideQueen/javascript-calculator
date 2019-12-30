@@ -1,22 +1,32 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const OperatorButtons = () => {
+import {
+  add,
+  subtract,
+  multiply,
+  divide
+} from '../../redux/calculator/calculator.actions';
+
+const OperatorButtons = ({ add, subtract, multiply, divide }) => {
   return (
     <div id='operator-buttons'>
-      <button className='operator-button' id='add'>
+      <button className='operator-button' id='add' onClick={add}>
         +
       </button>
-      <button className='operator-button' id='subtract'>
+      <button className='operator-button' id='subtract' onClick={subtract}>
         -
       </button>
-      <button className='operator-button' id='multiply'>
+      <button className='operator-button' id='multiply' onClick={multiply}>
         x
       </button>
-      <button className='operator-button' id='divide'>
+      <button className='operator-button' id='divide' onClick={divide}>
         /
       </button>
     </div>
   );
 };
 
-export default OperatorButtons;
+const mapDispatchToProps = { add, subtract, multiply, divide };
+
+export default connect(null, mapDispatchToProps)(OperatorButtons);
