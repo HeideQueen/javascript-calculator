@@ -1,0 +1,15 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+  font-family: 'Patua One', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(363deg, #4d5be6, #89aec0);
+  background-attachment: fixed;
+}

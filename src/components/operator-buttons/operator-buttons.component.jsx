@@ -8,22 +8,35 @@ import {
   divide
 } from '../../redux/calculator/calculator.actions';
 
+import {
+  OperatorButtonsContainer,
+  OperatorButton
+} from './operator-buttons.styles';
+
 const OperatorButtons = ({ add, subtract, multiply, divide }) => {
   return (
-    <div id='operator-buttons'>
-      <button className='operator-button' id='add' onClick={add}>
+    <OperatorButtonsContainer id='operator-buttons'>
+      <OperatorButton className='operator-button' id='add' onClick={add}>
         +
-      </button>
-      <button className='operator-button' id='subtract' onClick={subtract}>
+      </OperatorButton>
+      <OperatorButton
+        className='operator-button'
+        id='subtract'
+        onClick={subtract}
+      >
         -
-      </button>
-      <button className='operator-button' id='multiply' onClick={multiply}>
+      </OperatorButton>
+      <OperatorButton
+        className='operator-button'
+        id='multiply'
+        onClick={multiply}
+      >
         x
-      </button>
-      <button className='operator-button' id='divide' onClick={divide}>
+      </OperatorButton>
+      <OperatorButton className='operator-button' id='divide' onClick={divide}>
         /
-      </button>
-    </div>
+      </OperatorButton>
+    </OperatorButtonsContainer>
   );
 };
 

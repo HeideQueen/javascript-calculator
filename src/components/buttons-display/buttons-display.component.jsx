@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { ButtonsContainer, Wrapper, Button } from './buttons-display.styles';
+
 import {
   clearDisplay,
   equals
@@ -11,16 +13,18 @@ import OperatorButtons from '../operator-buttons/operator-buttons.component';
 
 const ButtonsDisplay = ({ clearDisplay, equals }) => {
   return (
-    <div id='buttons-display'>
-      <NumberButtons />
+    <ButtonsContainer id='buttons-display'>
+      <Wrapper>
+        <Button id='clear' onClick={clearDisplay}>
+          AC
+        </Button>
+        <Button primary id='equals' onClick={equals}>
+          =
+        </Button>
+      </Wrapper>
       <OperatorButtons />
-      <button id='equals' onClick={equals}>
-        =
-      </button>
-      <button id='clear' onClick={clearDisplay}>
-        AC
-      </button>
-    </div>
+      <NumberButtons />
+    </ButtonsContainer>
   );
 };
 

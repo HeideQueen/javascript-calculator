@@ -1,18 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const InputDisplay = ({ display, input }) => {
-  console.log(input);
+import { DisplayContainer, Display } from './input-display.styles';
+
+const InputDisplay = ({ display }) => {
   return (
-    <div id='display'>
-      <h2>{display}</h2>
-    </div>
+    <DisplayContainer id='display'>
+      <Display>{display}</Display>
+    </DisplayContainer>
   );
 };
 
 const mapStateToProps = state => ({
-  display: state.display,
-  input: state.input
+  display: state.display
 });
 
 export default connect(mapStateToProps)(InputDisplay);

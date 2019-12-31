@@ -3,15 +3,15 @@ import React from 'react';
 import InputDisplay from './components/input-display/input-display.component';
 import ButtonsDisplay from './components/buttons-display/buttons-display.component';
 
-import './App.css';
+import { AppContainer, Title } from './App.styles';
 
 const App = () => {
   return (
-    <div className='App'>
-      <h1>Queen's Calculator</h1>
+    <AppContainer className='App'>
+      <Title>Queen's Calculator</Title>
       <InputDisplay />
       <ButtonsDisplay />
-    </div>
+    </AppContainer>
   );
 };
 
