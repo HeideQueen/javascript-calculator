@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const OperatorButtonsContainer = styled.div`
+  width: 30%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 `;
 
 export const OperatorButton = styled.button`

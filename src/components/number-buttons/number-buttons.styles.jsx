@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const NumberButtonsContainer = styled.div`
+  width: 70%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;

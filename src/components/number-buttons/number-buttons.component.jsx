@@ -7,83 +7,86 @@ import { addNumberToInput } from '../../redux/calculator/calculator.actions';
 
 const NumberButtons = ({ addNumberToInput }) => {
   return (
-    <NumberButtonsContainer id='number-buttons'>
+    <NumberButtonsContainer id="number-buttons">
       <NumberButton
-        className='number-button'
-        id='one'
+        className="number-button"
+        id="one"
         onClick={() => addNumberToInput('1')}
       >
         1
       </NumberButton>
       <NumberButton
-        className='number-button'
-        id='two'
+        className="number-button"
+        id="two"
         onClick={() => addNumberToInput('2')}
       >
         2
       </NumberButton>
       <NumberButton
-        className='number-button'
-        id='three'
+        className="number-button"
+        id="three"
         onClick={() => addNumberToInput('3')}
       >
         3
       </NumberButton>
       <NumberButton
-        className='number-button'
-        id='four'
+        className="number-button"
+        id="four"
         onClick={() => addNumberToInput('4')}
       >
         4
       </NumberButton>
       <NumberButton
-        className='number-button'
-        id='five'
+        className="number-button"
+        id="five"
         onClick={() => addNumberToInput('5')}
       >
         5
       </NumberButton>
       <NumberButton
-        className='number-button'
-        id='six'
+        className="number-button"
+        id="six"
         onClick={() => addNumberToInput('6')}
       >
         6
       </NumberButton>
       <NumberButton
-        className='number-button'
-        id='seven'
+        className="number-button"
+        id="seven"
         onClick={() => addNumberToInput('7')}
       >
         7
       </NumberButton>
       <NumberButton
-        className='number-button'
-        id='eight'
+        className="number-button"
+        id="eight"
         onClick={() => addNumberToInput('8')}
       >
         8
       </NumberButton>
       <NumberButton
-        className='number-button'
-        id='nine'
+        className="number-button"
+        id="nine"
         onClick={() => addNumberToInput('9')}
       >
         9
       </NumberButton>
       <NumberButton
-        className='number-button'
-        id='zero'
+        className="number-button"
+        id="zero"
         onClick={() => addNumberToInput('0')}
       >
         0
       </NumberButton>
       <NumberButton
-        className='number-button'
-        id='decimal'
+        className="number-button"
+        id="decimal"
         onClick={() => addNumberToInput('.')}
       >
         .
+      </NumberButton>
+      <NumberButton className="number-button" id="emoji">
+        ^_^
       </NumberButton>
     </NumberButtonsContainer>
   );
@@ -91,4 +94,7 @@ const NumberButtons = ({ addNumberToInput }) => {
 
 const mapDispatchToProps = { addNumberToInput };
 
-export default connect(null, mapDispatchToProps)(NumberButtons);
+export default connect(
+  null,
+  mapDispatchToProps
+)(NumberButtons);
